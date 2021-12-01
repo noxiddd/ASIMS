@@ -1,0 +1,18 @@
+1,Nissan Oil Filter,Nissan,Oil filter,15000,6,5
+2,Nissan Sentra Windshield,Nissan,Windshield,30000,5,4
+3,Toyota Camry Left Tail Light,Toyota,tail light,25000,6,5
+4,Porche left Headlight,Porche,headlight,50000,3,5
+7,Honda left Fender,Honda,Fender,5700,3,5
+8,Honda Brakepad,Honda,Brakepad,4000,8,7
+10,Mitsubishi Lancer Dashbord,Mitsubishi,Dashboard,50000,4,3
+11,Mitsubishi Asx Rooflight,Mitsubishi,Rooflight,50000,4,3
+12,Mitsubishi Asx Bonnet,Mitsubishi,Bonnet,50000,4,3
+13,Mitsubishi Asx Right Sideview Mirror,Mitsubishi,Sideview Mirror,50000,4,3
+14,Mitsubishi Lancer left Sideview Mirror,Mitsubishi,Sideview Mirror,50000,4,3
+15,Mitsubishi Lancer Front Passenger Seat,Mitsubishi,Seat,50000,4,3
+16,Mitsubishi Asx Right3 Sideview Mirror,Mitsubishi,Sideview Mirror,50000,4,3
+17,Mitsubishi Lancer4 left Sideview Mirror,Mitsubishi,Sideview Mirror,50000,4,5
+18,Mitsubishi Lancer5 Fron Passenger Seat,Mitsubishi,Seat,50000,4,32,,,,0.0,0,0
+19,suzuki,suzuki,door,24234.0,3,5
+20,dscs,dsc,dscs,3435.0,34232,324
+21,november nissan,swiftr,car,317391.0,2,4
