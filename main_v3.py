@@ -6,6 +6,7 @@ from tkinter import ttk
 import salerecord
 import lowstockalert
 import inventory
+import sort
 
 #from pydrive.auth import Googleau
 
@@ -210,7 +211,47 @@ def intermed_removeinventory():
 
 
 def displayInventory():
-    print("Display Inventory")
+    inventory_list = []
+    inventory_listli = []
+    with open('inventory_file.txt','r') as f:
+        inventory_list = f.readlines()
+        for x in inventory_list:
+          xsplit = x.rstrip("\n").split(",")
+          inventory_listli.append(xsplit)
+    print ("Would you like to sort the inventory listing?")
+    answer = int(input("1. Yes  |  2. No\n"))
+    if answer == 1:
+        print("How would you like to sort the inventory listing?")
+        sortby = int(input("1. Name  | 2. Brand  | 3. Type  | 4. Quantity  | 5. ID\n"))
+        if sortby == 1:
+          inventory_listli.sort(key=sort.sortName)
+          print("ID Name Brand Type  Price Qty Reorder Level")
+          for i in inventory_listli:
+            print(i)
+        if sortby == 2:
+          inventory_listli.sort(key=sort.sortBrand)
+          print("ID Name Brand Type  Price Qty Reorder Level")
+          for i in inventory_listli:
+            print(i)    
+        if sortby == 3:
+          inventory_listli.sort(key=sort.sortType)
+          print("ID Name Brand Type  Price Qty Reorder Level")
+          for i in inventory_listli:
+            print(i)
+        if sortby == 4:
+          inventory_listli.sort(key=sort.sortQuantity)
+          print("ID Name Brand Type  Price Qty Reorder Level")
+          for i in inventory_listli:
+            print(i)
+        if sortby == 5:
+          inventory_listli.sort(key=sort.sortID)
+          print("ID Name Brand Type  Price Qty Reorder Level")
+          for i in inventory_listli:
+            print(i)
+    if answer == 2:
+        print("ID Name Brand Type  Price Qty  Reorder Level")
+        for i in inventory_listli:
+          print(i)
 
 def inventoryReport():   
     print("Inventory Report")
