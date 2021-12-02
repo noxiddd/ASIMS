@@ -6,3 +6,5 @@ credential to login:
 username: pat
 password: patty150
 
+Unit Testing for Sale Record component:
+Run the sale.py file
