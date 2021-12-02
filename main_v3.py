@@ -219,39 +219,50 @@ def displayInventory():
           xsplit = x.rstrip("\n").split(",")
           inventory_listli.append(xsplit)
     print ("Would you like to sort the inventory listing?")
-    answer = int(input("1. Yes  |  2. No\n"))
-    if answer == 1:
-        print("How would you like to sort the inventory listing?")
-        sortby = int(input("1. Name  | 2. Brand  | 3. Type  | 4. Quantity  | 5. ID\n"))
-        if sortby == 1:
-          inventory_listli.sort(key=sort.sortName)
-          print("ID Name Brand Type  Price Qty Reorder Level")
-          for i in inventory_listli:
-            print(i)
-        if sortby == 2:
-          inventory_listli.sort(key=sort.sortBrand)
-          print("ID Name Brand Type  Price Qty Reorder Level")
-          for i in inventory_listli:
-            print(i)    
-        if sortby == 3:
-          inventory_listli.sort(key=sort.sortType)
-          print("ID Name Brand Type  Price Qty Reorder Level")
-          for i in inventory_listli:
-            print(i)
-        if sortby == 4:
-          inventory_listli.sort(key=sort.sortQuantity)
-          print("ID Name Brand Type  Price Qty Reorder Level")
-          for i in inventory_listli:
-            print(i)
-        if sortby == 5:
-          inventory_listli.sort(key=sort.sortID)
-          print("ID Name Brand Type  Price Qty Reorder Level")
-          for i in inventory_listli:
-            print(i)
-    if answer == 2:
-        print("ID Name Brand Type  Price Qty  Reorder Level")
-        for i in inventory_listli:
-          print(i)
+    while True:
+        answer = int(input("1. Yes  |  2. No\n"))
+        if answer == 1:
+            print("How would you like to sort the inventory listing?")
+            while True:
+                sortby = int(input("1. Name  | 2. Brand  | 3. Type  | 4. Quantity  | 5. ID\n"))
+                if sortby == 1:
+                    inventory_listli.sort(key=sort.sortName)
+                    print("ID Name Brand Type  Price Qty Reorder Level")
+                    for i in inventory_listli:
+                        print(i)
+                    break
+                if sortby == 2:
+                    inventory_listli.sort(key=sort.sortBrand)
+                    print("ID Name Brand Type  Price Qty Reorder Level")
+                    for i in inventory_listli:
+                        print(i)
+                    break    
+                if sortby == 3:
+                    inventory_listli.sort(key=sort.sortType)
+                    print("ID Name Brand Type  Price Qty Reorder Level")
+                    for i in inventory_listli:
+                        print(i)
+                    break
+                if sortby == 4:
+                    inventory_listli.sort(key=sort.sortQuantity)
+                    print("ID Name Brand Type  Price Qty Reorder Level")
+                    for i in inventory_listli:
+                        print(i)
+                    break
+                if sortby == 5:
+                    inventory_listli.sort(key=sort.sortID)
+                    print("ID Name Brand Type  Price Qty Reorder Level")
+                    for i in inventory_listli:
+                        print(i)
+                    break
+                print("Invalid option chosen, please try again.\n")
+            break
+        if answer == 2:
+            print("ID Name Brand Type  Price Qty  Reorder Level")
+            for i in inventory_listli:
+                print(i)
+            break
+        print("Invalid option chosen, please try again.\n")
 
 def inventoryReport():   
     print("Inventory Report")
