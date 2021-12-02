@@ -35,6 +35,12 @@ def SaleSelectionReport():
      ws.geometry('300x300')
      ws.config(bg='#1FDE31')
      ws.title("Sales Report Generation")
+     btn = Button(
+    ws,
+    text='OK',
+    relief=SOLID,
+    command= generateSalespdf
+)
      month1_lab = Label(
     ws,
     text='Please enter the month you would you like to generate a pdf for: ',
@@ -44,21 +50,19 @@ def SaleSelectionReport():
      month_tf = Entry(ws)
      month_tf.pack()
      month1_lab.pack()
+     btn.pack()
      month = month_tf.get()
-     btn = Button(
-    ws,
-    text='Frame Sentence',
-    relief=SOLID,
-    command= generateSalespdf
-)
+     my_pdf.cell(200, 10, txt = "ASIMS Sales File Details", border = 1, ln = 1, align = "C")
+     for each in SalesFile:
+                my_pdf.cell(200, 10, txt = each, border = 1, ln = 1, align = "C")
+                generateSalespdf()
+     
     
      
 def generateSalespdf():
-    for each in SalesFile:
-        my_pdf.cell(200, 10, txt = "ASIMS Sales File Details", border = 1, ln = 1, align = "C")
-        if(month == each[0]):
-                my_pdf.cell(200, 10, txt = each, ln = 1, align = "L")
-        my_pdf.output("ASIMS Sales Report.pdf")
+    my_pdf.output("ASIMS Sales Report.pdf")
+        
+        
     
 
 
