@@ -539,7 +539,7 @@ def open_program():#display main list of buttons
     screen_main.title("ASIMS")
     screen_main.geometry("1300x700")
     screen_main.resizable(width=False,height=False)
-    components=["Manage Inventory","Display Inventory","Inventory Report","Search Inventory","Low Stock Alert","Sales Record","Backup Data"]
+    components=["Manage Inventory","Display Inventory","Inventory Report","Search Inventory","Low Stock Check","Sales Record","Backup Data"]
     components_functionnames=[manageInventory,displayInventory,inventoryReport,searchInventory,lowStockAlert,salesRecord,backupData]
     gridx=0
     gridy=0
